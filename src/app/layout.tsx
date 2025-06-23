@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Azure Shores",
     images: [
       {
-        url: "https://res.cloudinary.com/dhlyei79o/image/upload/v1750620816/the-wedding-photographer-seychelles-laurent-levy-mahe-studio-digifot-A-720x720_qbiitb.jpg",
+        url: "https://res.cloudinary.com/dhlyei79o/image/upload/v1750669577/OpenGraphImage_fniyzk.png",
         width: 1200,
         height: 630,
         alt: "Azure Shores Restaurant",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Experience luxury dining by the ocean with fresh seafood, water sports, and unforgettable coastal adventures.",
     images: [
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1750620816/the-wedding-photographer-seychelles-laurent-levy-mahe-studio-digifot-A-720x720_qbiitb.jpg",
+      "https://res.cloudinary.com/dhlyei79o/image/upload/v1750669577/OpenGraphImage_fniyzk.png",
     ],
   },
 };
