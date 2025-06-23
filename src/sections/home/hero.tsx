@@ -25,7 +25,9 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto space-y-6">
           <h1 className="text-3xl md:text-7xl font-bold leading-tight font-primary">
             Where Ocean Meets
-            <span className="block text-2xl">Culinary Excellence</span>
+            <span className="block text-2xl md:text-4xl">
+              Culinary Excellence
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-secondary">
             Experience luxury dining by the shore with fresh seafood, water
