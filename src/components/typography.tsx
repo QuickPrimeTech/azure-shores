@@ -23,7 +23,10 @@ const Header = ({ children, className }: WithChildrenAndClass) => {
 const H1 = ({ children, className, ...props }: WithChildrenAndClass) => {
   return (
     <h1
-      className={cn("font-bold text-3xl md:text-4xl lg:text-6xl", className)}
+      className={cn(
+        "font-bold text-3xl md:text-4xl lg:text-6xl font-primary",
+        className
+      )}
       {...props}
     >
       {children}

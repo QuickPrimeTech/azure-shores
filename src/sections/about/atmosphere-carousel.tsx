@@ -8,7 +8,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ExternalLink } from "lucide-react";
+import { Camera } from "lucide-react";
+import { Section, Header, H2, SubTitle } from "@/components/typography";
 
 const atmosphereImages = [
   {
@@ -45,62 +46,60 @@ const atmosphereImages = [
 
 export default function AtmosphereCarousel() {
   return (
-    <section className="section-padding bg-gray-50">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-gradient mb-4 font-cinzel">Our Atmosphere</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8 font-work-sans">
-            Every corner of Azure Shores is designed to enhance your coastal
-            dining experience
-          </p>
-          <Button className="btn-secondary">
-            <ExternalLink className="w-5 h-5 mr-2" />
-            View Full Gallery
-          </Button>
-        </div>
+    <Section className="bg-gray-50">
+      <Header>
+        <H2>Our Atmosphere</H2>
+        <SubTitle>
+          Every corner of Azure Shores is designed to enhance your coastal
+          dining experience
+        </SubTitle>
+      </Header>
 
-        <div className="max-w-6xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {atmosphereImages.map((image) => (
-                <CarouselItem
-                  key={image.id}
-                  className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
-                >
-                  <Card className="overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow duration-300">
-                    <div className="relative">
-                      <Image
-                        src={image.image || "/placeholder.svg"}
-                        alt={image.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 text-white">
-                        <h3 className="text-lg font-semibold mb-1 font-cinzel">
-                          {image.title}
-                        </h3>
-                        <p className="text-sm text-gray-200 font-work-sans">
-                          {image.description}
-                        </p>
-                      </div>
+      <div className="w-full max-w-6xl mx-auto">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {atmosphereImages.map((image) => (
+              <CarouselItem
+                key={image.id}
+                className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+              >
+                <Card className="group cursor-pointer py-0 overflow-hidden">
+                  <div className="relative">
+                    <Image
+                      src={image.image || "/placeholder.svg"}
+                      alt={image.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <h3 className="text-lg font-semibold mb-1 font-cinzel">
+                        {image.title}
+                      </h3>
+                      <p className="text-sm text-gray-200 font-work-sans">
+                        {image.description}
+                      </p>
                     </div>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
-        </div>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
-    </section>
+      <Button>
+        <Camera className="size-5" />
+        View Full Gallery
+      </Button>
+    </Section>
   );
 }
