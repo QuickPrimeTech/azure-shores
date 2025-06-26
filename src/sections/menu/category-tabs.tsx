@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Section } from "@/components/typography";
 const categories = [
   { id: "all", name: "All Items" },
   { id: "starters", name: "Starters" },

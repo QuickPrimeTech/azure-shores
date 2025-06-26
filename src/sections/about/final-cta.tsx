@@ -16,7 +16,7 @@ export default function PrimaryCTA() {
         <SubTitle className="text-xl text-blue-100 leading-relaxed">
           From the first bite to the last wave, Azure Shores offers an
           experience that goes beyond dining. Book your table and discover why
-          we're the coast's premier destination.
+          we&apos;re the coast&apos;s premier destination.
         </SubTitle>
       </Header>
       <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

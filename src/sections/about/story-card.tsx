@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Section, Header, H2 } from "@/components/typography";
+import { Section } from "@/components/typography";
 
 export default function StoryCard() {
   return (

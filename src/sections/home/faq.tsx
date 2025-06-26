@@ -5,8 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Section, Header, H2, SubTitle } from "@/components/typography";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const faqs = [
   {
