@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Section, Header, H1 } from "@/components/typography";
+import { Section, H1 } from "@/components/typography";
 
 export default function HeroSection() {
   return (
@@ -17,7 +17,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-10 text-center text-white container-custom">
+      <div className="relative z-10 text-center text-white">
         <div className="max-w-4xl mx-auto space-y-6">
           <H1>
             Our Story Begins

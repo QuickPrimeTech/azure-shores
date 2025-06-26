@@ -4,7 +4,7 @@ import { Section, Header, H2 } from "@/components/typography";
 export default function StoryCard() {
   return (
     <Section>
-      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+      <div className="bg-white rounded-3xl shadow-sm overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative h-96 lg:h-auto">
             <Image

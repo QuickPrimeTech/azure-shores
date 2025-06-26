@@ -30,7 +30,7 @@ export default function HeroSection() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-secondary">
-            Experience luxury dining by the shore with fresh seafood, water
+            Experience luxury dining by the shore of Seychelles with fresh seafood, water
             sports, and breathtaking ocean views
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">

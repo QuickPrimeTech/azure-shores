@@ -14,31 +14,36 @@ import { Section, Header, H2, SubTitle } from "@/components/typography";
 const atmosphereImages = [
   {
     id: "1",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dhlyei79o/image/upload/v1750701595/684176a824d3292883204061_Waterfront_Dining-_Best_Restaurants_with_a_View_in_South_Florida_yzegnw.jpg",
     title: "Oceanfront Dining",
     description: "Tables with panoramic ocean views",
   },
   {
     id: "2",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dhlyei79o/image/upload/v1750701960/7e706186_qlqzzt.jpg",
     title: "Sunset Terrace",
     description: "Perfect for romantic evenings",
   },
   {
     id: "3",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dhlyei79o/image/upload/v1750702050/1b-Private-Dining-Carousel_London_vjrhvl.jpg",
     title: "Private Dining",
     description: "Intimate spaces for special occasions",
   },
   {
     id: "4",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dhlyei79o/image/upload/v1750702137/Kali-sBar-Restaurants-SXM--ClementLouineau-20_irlmhw.jpg",
     title: "Beach Bar",
     description: "Casual drinks with your toes in the sand",
   },
   {
     id: "5",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://res.cloudinary.com/dhlyei79o/image/upload/v1750702243/Matrix-Chefs-table-460-1_qvhbww.png",
     title: "Chef's Table",
     description: "Watch culinary artistry in action",
   },
@@ -76,6 +81,7 @@ export default function AtmosphereCarousel() {
                       alt={image.title}
                       width={600}
                       height={400}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -92,8 +98,8 @@ export default function AtmosphereCarousel() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
       <Button>

@@ -81,7 +81,7 @@ export default function TeamCarousel() {
         </SubTitle>
       </Header>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto w-full">
         <Carousel
           opts={{
             align: "start",
@@ -130,8 +130,8 @@ export default function TeamCarousel() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
     </Section>

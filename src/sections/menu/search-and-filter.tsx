@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -14,6 +13,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Search, Filter, X } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface Filters {
   priceRange: [number, number];
@@ -83,44 +83,44 @@ export default function SearchAndFilter({
     filters.priceRange[1] < 50;
 
   return (
-    <section className="py-8 bg-sand-beige-light">
-      <div className="container-custom">
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-          <div className="w-full sm:w-96 relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <Input
-              type="text"
-              placeholder="Search our menu..."
-              value={searchQuery}
-              onChange={(e) => onSearch(e.target.value)}
-              className="pl-10 pr-10 py-3 text-lg border-gray-300 focus:border-coral focus:ring-coral"
-            />
-            {searchQuery && (
-              <Button
-                variant="ghost"
-                size="sm"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1"
-                onClick={() => onSearch("")}
-              >
-                <X className="w-4 h-4" />
-              </Button>
-            )}
-          </div>
+    <section className="section-x py-3">
+      <div className="flex gap-4 items-center justify-between">
+        <div className="w-full sm:w-96 relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Input
+            type="text"
+            placeholder="Search our menu..."
+            value={searchQuery}
+            onChange={(e) => onSearch(e.target.value)}
+            className="pl-10 pr-10 py-3 text-lg border-gray-300 focus:border-coral focus:ring-coral"
+          />
+          {searchQuery && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1"
+              onClick={() => onSearch("")}
+            >
+              <X className="w-4 h-4" />
+            </Button>
+          )}
+        </div>
 
-          <Sheet open={isFilterOpen} onOpenChange={setIsFilterOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" className="btn-outline">
-                <Filter className="w-4 h-4 mr-2" />
-                Filters
-                {hasActiveFilters && (
-                  <span className="ml-2 bg-coral text-white text-xs px-2 py-1 rounded-full">
-                    {filters.dietaryRestrictions.length +
-                      filters.cuisineTypes.length}
-                  </span>
-                )}
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-80">
+        <Sheet open={isFilterOpen} onOpenChange={setIsFilterOpen}>
+          <SheetTrigger asChild>
+            <Button variant="outline" className="btn-outline">
+              <Filter className="w-4 h-4 mr-2" />
+              Filters
+              {hasActiveFilters && (
+                <span className="ml-2 bg-coral text-white text-xs px-2 py-1 rounded-full">
+                  {filters.dietaryRestrictions.length +
+                    filters.cuisineTypes.length}
+                </span>
+              )}
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-3/4 md:w-1/2 px-4">
+            <ScrollArea className="h-full">
               <SheetHeader>
                 <SheetTitle className="flex items-center justify-between">
                   Filter Menu
@@ -133,7 +133,7 @@ export default function SearchAndFilter({
                 </SheetTitle>
               </SheetHeader>
 
-              <div className="space-y-8 mt-8">
+              <div className="space-y-8">
                 {/* Price Range */}
                 <div>
                   <Label className="text-base font-medium mb-4 block">
@@ -229,9 +229,9 @@ export default function SearchAndFilter({
                   Apply Filters
                 </Button>
               </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+            </ScrollArea>
+          </SheetContent>
+        </Sheet>
       </div>
     </section>
   );
