@@ -26,7 +26,7 @@ export default function PrimaryCTA() {
             Reserve Your Table
           </Link>
         </Button>
-        <Button variant="outline" size="lg">
+        <Button variant="outline" size="lg" asChild>
           <Menu className="size-5" />
           Discover Our Menu
         </Button>
