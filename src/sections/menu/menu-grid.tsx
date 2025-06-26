@@ -83,7 +83,7 @@ export default function MenuGrid({
                   </Badge>
                 )}
                 {item.isPopular && (
-                  <Badge className="bg-coral text-white">
+                  <Badge className="bg-orange-500 text-white">
                     <Star className="w-3 h-3 mr-1" />
                     Popular
                   </Badge>

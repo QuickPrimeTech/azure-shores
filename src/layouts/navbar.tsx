@@ -69,11 +69,15 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="btn-outline">
-            <Phone className="w-4 h-4 mr-2" />
-            Call Now
+          <Button variant="outline" size="sm" className="btn-outline" asChild>
+            <Link href={"tel:+254717448835"}>
+              <Phone className="w-4 h-4 mr-2" />
+              Call Now
+            </Link>
           </Button>
-          <Button className="btn-primary">Reserve Table</Button>
+          <Button className="btn-primary" asChild>
+            <Link href={"/reserve"}>Reserve Table</Link>
+          </Button>
         </div>
 
         {/* Mobile Menu */}
@@ -103,11 +107,19 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="pt-6 space-y-4">
-                <Button variant="outline" className="w-full btn-outline">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                <Button
+                  variant="outline"
+                  className="w-full btn-outline"
+                  asChild
+                >
+                  <Link href={"tel:+254717448835"}>
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </Link>
                 </Button>
-                <Button className="w-full btn-primary">Reserve Table</Button>
+                <Button className="w-full btn-primary" asChild>
+                  <Link href={"/reserve"}>Reserve Table</Link>
+                </Button>
               </div>
             </div>
           </SheetContent>

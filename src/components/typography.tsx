@@ -5,7 +5,7 @@ const Section = ({ children, className }: WithChildrenAndClass) => {
   return (
     <section
       className={cn(
-        "section-x section-y flex flex-col items-center gap-12",
+        "section-x section-y flex flex-col items-center justify-center gap-12",
         className
       )}
     >
