@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Camera } from "lucide-react";
 import { Section, Header, H2, SubTitle } from "@/components/typography";
+import Link from "next/link";
 
 const atmosphereImages = [
   {
@@ -102,9 +103,11 @@ export default function AtmosphereCarousel() {
           <CarouselNext />
         </Carousel>
       </div>
-      <Button>
-        <Camera className="size-5" />
-        View Full Gallery
+      <Button size={"lg"} asChild>
+        <Link href={"/gallery"}>
+          <Camera className="size-5" />
+          View Full Gallery
+        </Link>
       </Button>
     </Section>
   );

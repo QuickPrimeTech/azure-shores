@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Utensils } from "lucide-react";
 import { Section, Header, H2, SubTitle } from "@/components/typography";
+import Link from "next/link";
 
 export default function AboutCTA() {
   return (
@@ -14,13 +15,17 @@ export default function AboutCTA() {
         </SubTitle>
       </Header>
       <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-        <Button size="lg">
-          <Calendar className="w-5 h-5 mr-2" />
-          Reserve Your Table
+        <Button size="lg" asChild>
+          <Link href={"/reserve"}>
+            <Calendar className="size-5" />
+            Reserve Your Table
+          </Link>
         </Button>
         <Button variant="outline" size="lg">
-          <Utensils className="w-5 h-5 mr-2" />
-          Discover Our Menu
+          <Link href={"/menu"}>
+            <Utensils className="size-5" />
+            Discover Our Menu
+          </Link>
         </Button>
       </div>
     </Section>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Section, H2 } from "@/components/typography";
+import Link from "next/link";
 
 const aboutSections = [
   {
@@ -11,6 +12,7 @@ const aboutSections = [
     image:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1750655735/origin-cruise-galapagos-restaurant_tx8pxx.webp",
     cta: "Our Story",
+    href: "/about",
     reverse: false,
   },
   {
@@ -20,6 +22,7 @@ const aboutSections = [
     image:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1750655944/kite-surfing-seychelles_fyeefn.jpg",
     cta: "Host an Event",
+    href: "/events",
     reverse: true,
   },
   {
@@ -29,6 +32,7 @@ const aboutSections = [
     image:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1750657126/Culinary_20Lifestyle_20Nick_20Punta_20Cana_2012_cvmjo3.webp",
     cta: "Reserve Table",
+    href: "/menu",
     reverse: false,
   },
 ];
@@ -51,9 +55,11 @@ export default function AboutCards() {
               <p className="text-lg text-gray-600 leading-relaxed">
                 {section.description}
               </p>
-              <Button className="btn-primary group">
-                {section.cta}
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              <Button asChild>
+                <Link href={section.href}>
+                  {section.cta}
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
             <div

@@ -82,14 +82,6 @@ export default function FAQ() {
           })}
         </Accordion>
       </div>
-
-      <div className="mt-8 text-center">
-        <Button size="lg" asChild>
-          <Link href="/faqs" aria-label="View all frequently asked questions">
-            View All FAQs
-          </Link>
-        </Button>
-      </div>
     </Section>
   );
 }

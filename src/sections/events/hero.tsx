@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 import { Section, Header, H1, SubTitle } from "@/components/typography";
 import { FadeImage } from "@/components/fade-image";
+import Link from "next/link";
 
 const images = [
   "https://res.cloudinary.com/dhlyei79o/image/upload/v1750661866/caption_zr7zhs.jpg",
@@ -31,12 +32,14 @@ export default function HeroSection() {
             last a lifetime.
           </SubTitle>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button size="lg">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Activities
+            <Button size="lg" asChild>
+              <Link href={"/events"}>
+                <Calendar className="size-5" />
+                Book Activities
+              </Link>
             </Button>
-            <Button variant="outline" size="lg">
-              View Packages
+            <Button variant="outline" size="lg" asChild>
+              <Link href={"/events"}>View Packages</Link>
             </Button>
           </div>
         </Header>

@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import { Section, Header, H2, SubTitle } from "@/components/typography";
+import Link from "next/link";
 
 const bookingInfo = [
   {
@@ -87,19 +88,28 @@ export default function BookingSection() {
               </div>
 
               <div className="space-y-4">
-                <Button className="w-full btn-primary text-lg py-4">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book Online Now
+                <Button className="w-full text-lg py-4" asChild>
+                  <Link href={"/book-online"}>
+                    <Calendar className="size-5" />
+                    Book Online Now
+                  </Link>
                 </Button>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Button variant="outline" className="btn-outline">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Us
+                  <Button variant="outline" className="btn-outline" asChild>
+                    <Link href={"tel:+254717448835"}>
+                      <Phone className="size-4" />
+                      Call Us
+                    </Link>
                   </Button>
-                  <Button className="bg-green-500 hover:bg-green-600 text-white">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    WhatsApp
+                  <Button
+                    className="bg-green-500 hover:bg-green-600 text-white"
+                    asChild
+                  >
+                    <Link href={"wa.me/254717448835"}>
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      WhatsApp
+                    </Link>
                   </Button>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Utensils } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -30,14 +31,18 @@ export default function HeroSection() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-secondary">
-            Experience luxury dining by the shore of Seychelles with fresh seafood, water
-            sports, and breathtaking ocean views
+            Experience luxury dining by the shore of Seychelles with fresh
+            seafood, water sports, and breathtaking ocean views
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button size="lg">Reserve Your Table</Button>
-            <Button variant="outline" size="lg">
-              <Play className="size-5" />
-              Watch Our Story
+            <Button size="lg" asChild>
+              <Link href={"/reserve"}>Reserve Your Table</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href={"/menu"}>
+                <Utensils className="size-5" />
+                Discover Our Menu
+              </Link>
             </Button>
           </div>
         </div>
